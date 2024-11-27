@@ -23,7 +23,7 @@ async function getSongs(folder) {
     currFolder = folder; // Set the current folder
     try {
         // Fetch the directory content of the folder
-        let response = await fetch(`/${folder}/`);//response variable fetches everything from folder
+        let response = await fetch(`${folder}/`);//response variable fetches everything from folder
         if (!response.ok) {
             console.error(`Error fetching folder: ${folder}. Status: ${response.status}`);
             return [];
@@ -95,7 +95,7 @@ function updateLibrary(songs) {
 // Play the selected song
 function playMusic(track, pause = false) {
     console.log(`Playing music: ${track}`); // Log the song being played
-    currentSong.src = `/${currFolder}/` + track; // Set the audio source to the selected song
+    currentSong.src = `${currFolder}/` + track; // Set the audio source to the selected song
     if (!pause) {
         currentSong.play(); // Play the song if it's not paused
         document.getElementById("play").src = "img/pause.svg"; // Change the play button to pause
@@ -114,7 +114,7 @@ async function displayAlbums() {
     console.log("Fetching and displaying albums..."); // Log fetching albums
     try {
         // Fetch the albums list
-        let response = await fetch(`/songs/`);
+        let response = await fetch(`songs/`);
         if (!response.ok) {
             console.error(`Error fetching albums. Status: ${response.status}`);
             return;
@@ -136,7 +136,7 @@ async function displayAlbums() {
         cardContainers.forEach(cardContainer => {
             for (let anchor of anchors) {
                 // If the anchor points to a valid album folder
-                if (anchor.href.includes("/songs") && !anchor.href.includes(".htaccess")) {
+                if (anchor.href.includes("songs") && !anchor.href.includes(".htaccess")) {
                     let folder = anchor.href.split("/").slice(-2)[0]; // Get folder name
                     cardContainer.innerHTML += `<div class="play">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -241,13 +241,6 @@ async function main() {
         document.querySelector(".volume p").innerText = currentSong.volume * 100 + "%"; // Display the current volume percentage
     });
 
-    // Shuffle toggle
-    let isShuffle = false;
-    document.querySelector(".shuffle").addEventListener("click", () => {
-        isShuffle = !isShuffle; // Toggle shuffle state
-        let shuffleClass = isShuffle ? "active" : "";
-        document.querySelector(".shuffle").classList.toggle(shuffleClass); // Add or remove the shuffle class
-    });
 }
 
 // Run the main function

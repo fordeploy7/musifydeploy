@@ -10,7 +10,7 @@
         /* Root Variables for Colors */
         @font-face {
             font-family: 'BasheqVintage';
-            src: url('/fonts/BasheqVintageDemoVersionRegular-ov13x.ttf') format('truetype');
+            src: url('./fonts/BasheqVintageDemoVersionRegular-ov13x.ttf') format('truetype');
         }
 
         :root {
@@ -261,89 +261,90 @@
         .footer-bottom {
             display: flex;
             justify-content: space-between;
-            
+
             text-align: center;
             margin-top: 20px;
             font-size: 14px;
             color: #d1d1d1;
         }
+
         /* Responsive Navigation */
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-    }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+            }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
 
-    .logo {
-        margin-bottom: 10px;
-        text-align: center;
-        flex-basis: 100%;
-    }
+            .logo {
+                margin-bottom: 10px;
+                text-align: center;
+                flex-basis: 100%;
+            }
 
-    .btn-login {
-        padding: 8px 15px;
-        font-size: 0.9em;
-    }
-}
+            .btn-login {
+                padding: 8px 15px;
+                font-size: 0.9em;
+            }
+        }
 
-/* Responsive Grid Layouts */
-@media (max-width: 768px) {
-    .features-grid,
-    .trending-grid,
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
+        /* Responsive Grid Layouts */
+        @media (max-width: 768px) {
 
-    .features-grid .feature,
-    .trending-grid .trending-item,
-    .testimonials-grid .testimonial {
-        text-align: center;
-    }
+            .features-grid,
+            .trending-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .hero-content h1 {
-        font-size: 2em;
-    }
+            .features-grid .feature,
+            .trending-grid .trending-item,
+            .testimonials-grid .testimonial {
+                text-align: center;
+            }
 
-    .hero-content p {
-        font-size: 1em;
-    }
+            .hero-content h1 {
+                font-size: 2em;
+            }
 
-    .btn-signup {
-        font-size: 0.9em;
-        padding: 8px 15px;
-    }
-}
+            .hero-content p {
+                font-size: 1em;
+            }
 
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.5em;
-    }
+            .btn-signup {
+                font-size: 0.9em;
+                padding: 8px 15px;
+            }
+        }
 
-    .hero-content p {
-        font-size: 0.9em;
-    }
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.5em;
+            }
 
-    .footer-row {
-        flex-direction: column;
-        text-align: center;
-    }
+            .hero-content p {
+                font-size: 0.9em;
+            }
 
-    .footer-col {
-        margin: 0;
-        padding: 10px 0;
-    }
+            .footer-row {
+                flex-direction: column;
+                text-align: center;
+            }
 
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
+            .footer-col {
+                margin: 0;
+                padding: 10px 0;
+            }
 
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 
@@ -353,8 +354,7 @@
         <nav class="navbar">
             <div class="logo">Musify</div>
             <ul class="nav-links">
-                <li><a
-                        href="#features">Features</a>
+                <li><a href="#features">Features</a>
                 </li>
                 <li><a href="#trending">Trending</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -483,4 +483,5 @@
         </div>
     </footer>
 </body>
+
 </html>

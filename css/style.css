@@ -113,8 +113,9 @@
   
   @font-face {
     font-family: 'BasheqVintage';
-    src: url('/fonts/BasheqVintageDemoVersionRegular-ov13x.ttf') format('truetype');
+    src: url('../fonts/BasheqVintageDemoVersionRegular-ov13x.ttf') format('truetype');
 }
+
 
 
 .logo-text {
